@@ -6,7 +6,7 @@ class Lista {
         this.verificar()
     }
     adicionar() {
-        this.lista.innerHTML += `<li>${this.tarefa.value}</li>`
+        this.lista.innerHTML += `<p>${this.tarefa.value}</p>`
     }
     verificar() {
         this.botao.addEventListener('click', this.adicionar.bind(this))
