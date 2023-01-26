@@ -19,13 +19,20 @@
                     <p id="lista"></p>
                 </section>
             </div>
-            <div id="input">
-                <div id="texto">
-                    <label for="input">Insira sua tarefa</label>
-                    <input type="text" id="tarefa">
-                    <button id="adicionar">Adicionar</button>
+            <form action="post" id="formulario">
+                <div id="input">
+                    <div id="texto">
+                        <label for="input">Insira sua tarefa</label>
+                        <input type="text" id="tarefa">
+                        <button id="adicionar">Adicionar</button>
+                    </div>
+                    <div id="remover">
+                        <label for="remove">Escolha o número de uma tarefa para remover</label>
+                        <input type="number" id="numero">
+                        <button id="remover">Remover</button>
+                    </div>
                 </div>
-            </div>
+            </form>
     </main>
     <script src="script.js"></script>
 </body>

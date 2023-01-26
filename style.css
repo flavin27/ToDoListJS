@@ -37,6 +37,7 @@ div#input {
     justify-content: center;
     align-items: flex-end;
     padding: 30px;
+    flex-direction: row;
 }
 div#lista {
     flex: 1;
@@ -48,5 +49,16 @@ h2 {
 ul {
     padding: 20px;
     font-size: 1.2em;
+}
+div#texto {
+    flex: 1;
+    display: grid;
+}
+div#remover {
+    flex: 1;
+    display: grid;
+}
+input, button {
+    font-size: 1em;
 }
 
