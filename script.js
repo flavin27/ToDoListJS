@@ -5,7 +5,8 @@ class Lista {
         this.apaga = document.getElementById('numero')
         this.botaoRemover = document.getElementById('remover')
         this.lista = document.getElementById('lista')
-        this.formulario = document.getElementById('formulario')
+        this.formularioAdd = document.getElementById('add')
+        this.formularioRemov = document.getElementById('remov')
         this.verificar()
         this.indice = 0
         this.estado = false
@@ -15,25 +16,26 @@ class Lista {
         this.lista.innerHTML += `<p id= '${this.indice}'>${this.indice} - ${this.tarefa.value}</p>`
     }
     remover() {
-        this.apaga.innerHTML = ''
-        this.estado = false
+        this.apagap = document.getElementById(`${this.apaga.value}`)
+        this.apagap.remove()
     }
+    
     verificar() {
         this.botaoAdicionar.addEventListener("click", (event) => {
             event.preventDefault();
+            this.estado = false;
             this.validar();
-        });
 
+        });
+        
         this.botaoRemover.addEventListener("click", (event) => {
             event.preventDefault();
-            this.validar();
             this.estado = true;
+            this.validar();
         });
     }
     validar() {
-        if (this.tarefa.value === '' ) {
-            window.alert('Digite uma tarefa valida')
-        } else if (this.estado === false) {
+        if (this.estado === false) {
             this.adicionar()
         } else {
             this.remover()
